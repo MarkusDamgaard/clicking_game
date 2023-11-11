@@ -311,6 +311,7 @@ version = "0.1.0"
 dependencies = [
  "ggez",
  "glam",
+ "itertools",
  "specs",
 ]
 
@@ -1105,6 +1106,15 @@ checksum = "7789f7f3c9686f96164f5109d69152de759e76e284f736bd57661c6df5091919"
 dependencies = [
  "core-foundation-sys 0.8.4",
  "mach",
+]
+
+[[package]]
+name = "itertools"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "284f18f85651fe11e8a991b2adb42cb078325c996ed026d994719efcfca1d54b"
+dependencies = [
+ "either",
 ]
 
 [[package]]
