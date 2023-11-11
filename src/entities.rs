@@ -1,3 +1,9 @@
+
+// entities.rs
+use crate::components::*;
+use specs::{Builder, World, WorldExt};
+
+// Create a wall entity
 pub fn create_wall(world: &mut World, position: Position) {
     world
         .create_entity()
@@ -6,6 +12,7 @@ pub fn create_wall(world: &mut World, position: Position) {
             path: "/images/wall.png".to_string(),
         })
         .with(Wall {})
+        .with(Immovable)
         .build();
 }
 
@@ -27,6 +34,7 @@ pub fn create_box(world: &mut World, position: Position) {
             path: "/images/box.png".to_string(),
         })
         .with(Box {})
+        .with(Movable)
         .build();
 }
 
@@ -49,5 +57,6 @@ pub fn create_player(world: &mut World, position: Position) {
             path: "/images/player.png".to_string(),
         })
         .with(Player {})
+        .with(Movable)
         .build();
 }
